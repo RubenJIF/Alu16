@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity prueba1 is
+	port(
+		i0, i1 : in std_logic;
+		o : out std_logic;
+	);
+end prueba1;
+
+architecture rtl of prueba1 is
+	signal q0, q1 : std_logic;
+begin
+	q0 <= i0 and q1;
+	q1 <= (not i0) and (not i1)
+	o <= q0 or q1;
+end rtl;
